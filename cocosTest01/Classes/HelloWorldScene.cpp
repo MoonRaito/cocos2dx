@@ -31,9 +31,13 @@ bool HelloWorld::init()
         return false;
     }
     
-    auto rootNode = CSLoader::createNode("MainScene.csb");
-
-    addChild(rootNode);
+//    auto rootNode = CSLoader::createNode("MainScene.csb");
+//
+//    addChild(rootNode);
+    
+    
+//    Sprite *s = Sprite::create("whah");
+//    this->addChild(s);
 
     return true;
 }
