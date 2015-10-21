@@ -38,6 +38,12 @@ bool HelloWorld::init()
     
 //    Sprite *s = Sprite::create("whah");
 //    this->addChild(s);
+    
+    MenuItemFont *item = MenuItemFont::create("ylyTest 按钮 01");
+    
+    Menu *m = Menu::create(item,NULL);
+    
+    this->addChild(m);
 
     return true;
 }
