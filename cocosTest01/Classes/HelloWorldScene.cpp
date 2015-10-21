@@ -2,6 +2,8 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 
+#include "Map01.hpp"
+
 USING_NS_CC;
 
 using namespace cocostudio::timeline;
@@ -39,11 +41,34 @@ bool HelloWorld::init()
 //    Sprite *s = Sprite::create("whah");
 //    this->addChild(s);
     
-    MenuItemFont *item = MenuItemFont::create("ylyTest 按钮 01");
+//    MenuItemFont *item = MenuItemFont::create("ylyTest 按钮 01");
+//    
+//    Menu *m = Menu::create(item,NULL);
+//    
+//    this->addChild(m);
+//
+//    return true;
+//}
+    MenuItemFont *item = MenuItemFont::create("开始游戏",CC_CALLBACK_1(HelloWorld::onMenuItem,this));
     
-    Menu *m = Menu::create(item,NULL);
+    Menu *menu = Menu::create(item,NULL);
     
-    this->addChild(m);
-
+    
+    this->addChild(menu);
+    
     return true;
+}
+
+void HelloWorld::onMenuItem(Ref *ref)
+{
+    //    CCLOG("OK...");
+    Scene *scene = Map01::createScene();
+    TransitionFade *transitionFade = TransitionFade::create(2, scene);
+    Director::getInstance()->replaceScene(transitionFade);
+    // replaceScene 每次销毁前一场景
+    // push 不销毁
+    //    Director::getInstance()->pushScene(scene);
+    
+    // pop 
+    
 }
