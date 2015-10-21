@@ -40,6 +40,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     FileUtils::getInstance()->addSearchPath("res");
+    
+    // 2015年10月21日18:18:11 yly 添加地图
+    FileUtils::getInstance()->addSearchPath("map");
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
