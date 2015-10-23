@@ -22,7 +22,7 @@ bool Map01::init()
     }
     
     
-    TMXTiledMap *map = TMXTiledMap::create("hywzmap01.tmx");
+    TMXTiledMap *map = TMXTiledMap::create("map04_1.tmx");
     
     this->addChild(map);
     

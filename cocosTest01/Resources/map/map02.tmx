@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="48" tileheight="48" nextobjectid="1">
+ <tileset firstgid="1" name="第二章" tilewidth="48" tileheight="48" tilecount="361">
+  <image source="map02.png" width="912" height="912"/>
+ </tileset>
+ <layer name="块层 1" width="19" height="19">
+  <data encoding="base64" compression="zlib">
+   eJwNwwVwEAQAAMDRjI7BRjeMZkF3d2zA6FwSAtIhDUqHEragNAbdjYISBigtLaWgpCL5d//JAgICkpvClKYytWlMa6DpTG8GM5rJzGYxq9nMbpA5zGmwIeYyt3nMaz7zW8CCFrKwRSxqMYtbwlBLWsrSlrGs5SxvBcMMN8JIK1rJylaxqtWsbg1rWsva1rGu9axvAxvayMY2sanNbG4LW9rK1rYxymjb2s72xtjBjnays13saje728Oe9rK3scYZb4KJJtnHvvazv284wIEO8k0HO8ShDnO4IxzpKEc7xrcc6zjHO8GJTnKyU5zq277jNKc7w5nOcrZznOs85/uu77nAhS5yse/7gR/6kR/7iZ/6mUtc6ud+4TKXu8KVrnK1a1zrl37l137jOte7wY1ucrNb3Oo2t7vDne5yt3vc6z73e8CDfut3HvKw3/uDRzzqMY/7oz/5s794wpP+6m+e8rRnPOs5z3vB373oJS97xate87p/eMOb3vK2d/zTv7zrPf/2H+/7wIc+8rFP/Nf/fOr/PvO5L3zpKwOSYXJTmNJUpjaNaQ00nenNYEYzmdksZjWb2Q0yhzkNNsRc5jaPec1nfgtY0EIWtohFLWZxSxhqSUtZ2jKWtZzlrWCY4UYYaUUrWdkqVrWa1a1hTWtZ2zrWtZ71bWBDG9nYJja1mc1tYUtb2do2RhltW9vZ3hg72NFOdraLXe1md3vY0172NtY4400w0ST7+BpoQJWo
+  </data>
+ </layer>
+</map>

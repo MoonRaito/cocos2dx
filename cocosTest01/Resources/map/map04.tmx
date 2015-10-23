@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="17" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="第四章" tilewidth="32" tileheight="32" tilecount="510">
+  <image source="map04.png" width="960" height="544"/>
+ </tileset>
+ <layer name="块层 1" width="30" height="17">
+  <data encoding="base64" compression="zlib">
+   eJwNwwMMGAYAALDZtm3btm3btm3btm3btm3b29+kDRggQIBABjaIQQ1mcEMY0lCGNoxhDWd4IxjRSEY2ilGNZnRjGNNYxjaOcY1nfBOY0EQmNolJTWZyU5jSVKY2jWlNZ3ozmNFMZjaLWc1mdnOY01zmNo95zWd+C1jQQha2iEUtZnFLWNJSlraMZS1neStY0UpWtopVrWZ1a1jTWta2jnWtZ30b2NBGNraJTW1mc1vY0la2to1tbWd7O9jRTna2i13tZnd72NNe9raPfe1nfwc40EEOdohDHeZwRzjSUY52jGMd53gnONFJTnaKU53mdGc401nOdo5zned8F7jQRS52iUtd5nJXuNJVrnaNa13neje40U1udotb3eZ2d7jTXe52j3vd534PeNBDHvaIRz3mcU940lOe9oxnPed5L3jRS172ile95nVveNNb3vaOd73nfR/40Ec+9olPfeZzX/jSV772jW9953s/+NFPfvaLX/3md3/401/+9o9//ed/BgiIgQxsEIMazOCGMKShDG0YwxrO8EYwopGMbBSjGs3oxjCmsYxtHOMaz/gmMKGJTGwSk5rM5KYwpalMbRrTms70ZjCjmcxsFrOazezmMKe5zG0e85rP/BawoIUsbBGLWszilrCkpSxtGctazvJWsKKVrGwVq1rN6tawprWsbR3rWs/6NrChjWxsE5vazOa2sKWtbG0b29rO9nawo53sbBe72s3u9rCnvextH/vaz/4OcKCDHOwQhzrM4Y5wpKMc7RjHOs7xTnCik5zsFKc6zenOcKaznO0c5zrP+S5woYtc7BKXuszlrnClq1ztGte6zvVucKOb3OwWt7rN7e5wp7vc7R73us/9HvCghzzsEY96zOOe8KSnPO0Zz3rO817wope87BWves3r3vCmt7ztHe96z/s+8KGPfOwTn/rM577wpa987Rvf+s73fvCjn/zsF7/6ze/+8Ke//O0f//rP/wGOuP8B
+  </data>
+ </layer>
+</map>
