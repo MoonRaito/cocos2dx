@@ -6,6 +6,7 @@
 #include "Game01.hpp"
 #include "MapTest01.hpp"
 #include "FindPath/GameScene.hpp"
+#include "FindPath/MyGame.hpp"
 
 
 USING_NS_CC;
@@ -123,7 +124,7 @@ void HelloWorld::onMenuItemMyGame(Ref *ref)
     //        Scene *scene = Map01::createScene();
     //    Scene *scene = Game01::createScene();
     //    Scene *scene = MapTest01::createScene();
-    Scene *scene = Game::createScene();
+    Scene *scene = MyGame::createScene();
     TransitionFade *transitionFade = TransitionFade::create(2, scene);
     Director::getInstance()->replaceScene(transitionFade);
     // replaceScene 每次销毁前一场景

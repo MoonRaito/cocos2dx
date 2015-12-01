@@ -79,6 +79,8 @@
 		F6BF8D571C0DA21D007B2372 /* PointDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4C1C0DA21D007B2372 /* PointDelegate.cpp */; settings = {ASSET_TAGS = (); }; };
 		F6BF8D581C0DA21D007B2372 /* SpriteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */; settings = {ASSET_TAGS = (); }; };
 		F6BF8D591C0DA21D007B2372 /* SpriteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D8A1C0DA67A007B2372 /* MyGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D881C0DA67A007B2372 /* MyGame.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D8B1C0DA67A007B2372 /* MyGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D881C0DA67A007B2372 /* MyGame.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +158,8 @@
 		F6BF8D4D1C0DA21D007B2372 /* PointDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PointDelegate.hpp; sourceTree = "<group>"; };
 		F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteBase.cpp; sourceTree = "<group>"; };
 		F6BF8D4F1C0DA21D007B2372 /* SpriteBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteBase.hpp; sourceTree = "<group>"; };
+		F6BF8D881C0DA67A007B2372 /* MyGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGame.cpp; sourceTree = "<group>"; };
+		F6BF8D891C0DA67A007B2372 /* MyGame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyGame.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +365,8 @@
 		F6BF8D451C0DA21D007B2372 /* FindPath */ = {
 			isa = PBXGroup;
 			children = (
+				F6BF8D881C0DA67A007B2372 /* MyGame.cpp */,
+				F6BF8D891C0DA67A007B2372 /* MyGame.hpp */,
 				F6BF8D461C0DA21D007B2372 /* GameScene.cpp */,
 				F6BF8D471C0DA21D007B2372 /* GameScene.hpp */,
 				F6BF8D481C0DA21D007B2372 /* Grid.cpp */,
@@ -492,6 +498,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				F6BF8D431C0DA1DD007B2372 /* MapTest01.cpp in Sources */,
 				F6BF8D541C0DA21D007B2372 /* PathAritmeic.cpp in Sources */,
+				F6BF8D8A1C0DA67A007B2372 /* MyGame.cpp in Sources */,
 				F6BF8D561C0DA21D007B2372 /* PointDelegate.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				F6BF8D501C0DA21D007B2372 /* GameScene.cpp in Sources */,
@@ -516,6 +523,7 @@
 				F6BF8D591C0DA21D007B2372 /* SpriteBase.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				F6BF8D531C0DA21D007B2372 /* Grid.cpp in Sources */,
+				F6BF8D8B1C0DA67A007B2372 /* MyGame.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +536,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -545,12 +554,13 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yly.b;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -564,6 +574,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -579,12 +590,13 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yly.b;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
