@@ -3,6 +3,10 @@
 #include "ui/CocosGUI.h"
 
 #include "Map01.hpp"
+#include "Game01.hpp"
+#include "MapTest01.hpp"
+#include "FindPath/GameScene.hpp"
+
 
 USING_NS_CC;
 
@@ -49,9 +53,30 @@ bool HelloWorld::init()
 //
 //    return true;
 //}
+    
+//    Vec2 winSize = Director::getInstance()->getWinSize();
+    
+    // 可见视图大小
+    Size visiblesSize = Director::getInstance()->getVisibleSize();
+    
     MenuItemFont *item = MenuItemFont::create("开始游戏",CC_CALLBACK_1(HelloWorld::onMenuItem,this));
     
-    Menu *menu = Menu::create(item,NULL);
+    MenuItemFont *gameMap = MenuItemFont::create("游戏地图",CC_CALLBACK_1(HelloWorld::onMenuItemGameMap,this));
+    
+//    gameMap->setPosition(Vec2(visiblesSize.width/2, visiblesSize.height/2-30));
+    
+//    gameMap->setAnchorPoint(Vec2(visiblesSize.width/2, visiblesSize.height/2-30));
+    // 锚点和位置
+//    gameMap->setAnchorPoint(Vec2::ZERO);
+    
+    gameMap->setPosition(Vec2(0.0, -50));
+    
+    
+    MenuItemFont *myGame = MenuItemFont::create("myGame",CC_CALLBACK_1(HelloWorld::onMenuItemMyGame,this));
+    myGame->setPosition(Vec2(0.0, -100));
+
+    
+    Menu *menu = Menu::create(item,gameMap,myGame,NULL);
     
     
     this->addChild(menu);
@@ -62,7 +87,9 @@ bool HelloWorld::init()
 void HelloWorld::onMenuItem(Ref *ref)
 {
     //    CCLOG("OK...");
-    Scene *scene = Map01::createScene();
+    //    Scene *scene = Map01::createScene();
+    //    Scene *scene = Game01::createScene();
+        Scene *scene = MapTest01::createScene();
     TransitionFade *transitionFade = TransitionFade::create(2, scene);
     Director::getInstance()->replaceScene(transitionFade);
     // replaceScene 每次销毁前一场景
@@ -70,5 +97,39 @@ void HelloWorld::onMenuItem(Ref *ref)
     //    Director::getInstance()->pushScene(scene);
     
     // pop 
+    
+}
+
+void HelloWorld::onMenuItemGameMap(Ref *ref)
+{
+    //    CCLOG("OK...");
+//        Scene *scene = Map01::createScene();
+    //    Scene *scene = Game01::createScene();
+//    Scene *scene = MapTest01::createScene();
+    Scene *scene = Game::createScene();
+    TransitionFade *transitionFade = TransitionFade::create(2, scene);
+    Director::getInstance()->replaceScene(transitionFade);
+    // replaceScene 每次销毁前一场景
+    // push 不销毁
+    //    Director::getInstance()->pushScene(scene);
+    
+    // pop
+    
+}
+
+void HelloWorld::onMenuItemMyGame(Ref *ref)
+{
+    //    CCLOG("OK...");
+    //        Scene *scene = Map01::createScene();
+    //    Scene *scene = Game01::createScene();
+    //    Scene *scene = MapTest01::createScene();
+    Scene *scene = Game::createScene();
+    TransitionFade *transitionFade = TransitionFade::create(2, scene);
+    Director::getInstance()->replaceScene(transitionFade);
+    // replaceScene 每次销毁前一场景
+    // push 不销毁
+    //    Director::getInstance()->pushScene(scene);
+    
+    // pop
     
 }

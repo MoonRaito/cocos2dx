@@ -61,6 +61,24 @@
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 		F0F24BEB88841CFBFE570287 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC84510B1413B3FCD7DE99B /* libcocos2d Mac.a */; };
+		F6BF8D221C0DA003007B2372 /* Map01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D201C0DA003007B2372 /* Map01.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D231C0DA003007B2372 /* Map01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D201C0DA003007B2372 /* Map01.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D3B1C0DA0E1007B2372 /* map in Resources */ = {isa = PBXBuildFile; fileRef = F6BF8D3A1C0DA0E1007B2372 /* map */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D3C1C0DA0E1007B2372 /* map in Resources */ = {isa = PBXBuildFile; fileRef = F6BF8D3A1C0DA0E1007B2372 /* map */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D411C0DA1DD007B2372 /* Game01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D3D1C0DA1DD007B2372 /* Game01.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D421C0DA1DD007B2372 /* Game01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D3D1C0DA1DD007B2372 /* Game01.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D431C0DA1DD007B2372 /* MapTest01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D3F1C0DA1DD007B2372 /* MapTest01.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D441C0DA1DD007B2372 /* MapTest01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D3F1C0DA1DD007B2372 /* MapTest01.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D501C0DA21D007B2372 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D461C0DA21D007B2372 /* GameScene.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D511C0DA21D007B2372 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D461C0DA21D007B2372 /* GameScene.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D521C0DA21D007B2372 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D481C0DA21D007B2372 /* Grid.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D531C0DA21D007B2372 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D481C0DA21D007B2372 /* Grid.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D541C0DA21D007B2372 /* PathAritmeic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4A1C0DA21D007B2372 /* PathAritmeic.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D551C0DA21D007B2372 /* PathAritmeic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4A1C0DA21D007B2372 /* PathAritmeic.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D561C0DA21D007B2372 /* PointDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4C1C0DA21D007B2372 /* PointDelegate.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D571C0DA21D007B2372 /* PointDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4C1C0DA21D007B2372 /* PointDelegate.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D581C0DA21D007B2372 /* SpriteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6BF8D591C0DA21D007B2372 /* SpriteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +139,23 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F6BF8D201C0DA003007B2372 /* Map01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map01.cpp; sourceTree = "<group>"; };
+		F6BF8D211C0DA003007B2372 /* Map01.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map01.hpp; sourceTree = "<group>"; };
+		F6BF8D3A1C0DA0E1007B2372 /* map */ = {isa = PBXFileReference; lastKnownFileType = folder; path = map; sourceTree = "<group>"; };
+		F6BF8D3D1C0DA1DD007B2372 /* Game01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game01.cpp; sourceTree = "<group>"; };
+		F6BF8D3E1C0DA1DD007B2372 /* Game01.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game01.hpp; sourceTree = "<group>"; };
+		F6BF8D3F1C0DA1DD007B2372 /* MapTest01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapTest01.cpp; sourceTree = "<group>"; };
+		F6BF8D401C0DA1DD007B2372 /* MapTest01.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapTest01.hpp; sourceTree = "<group>"; };
+		F6BF8D461C0DA21D007B2372 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		F6BF8D471C0DA21D007B2372 /* GameScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameScene.hpp; sourceTree = "<group>"; };
+		F6BF8D481C0DA21D007B2372 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		F6BF8D491C0DA21D007B2372 /* Grid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Grid.hpp; sourceTree = "<group>"; };
+		F6BF8D4A1C0DA21D007B2372 /* PathAritmeic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathAritmeic.cpp; sourceTree = "<group>"; };
+		F6BF8D4B1C0DA21D007B2372 /* PathAritmeic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PathAritmeic.hpp; sourceTree = "<group>"; };
+		F6BF8D4C1C0DA21D007B2372 /* PointDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointDelegate.cpp; sourceTree = "<group>"; };
+		F6BF8D4D1C0DA21D007B2372 /* PointDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PointDelegate.hpp; sourceTree = "<group>"; };
+		F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteBase.cpp; sourceTree = "<group>"; };
+		F6BF8D4F1C0DA21D007B2372 /* SpriteBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteBase.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +277,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6BF8D3A1C0DA0E1007B2372 /* map */,
 				7FDD41ADB08C3C9247273E5B /* res */,
 			);
 			name = Resources;
@@ -251,6 +287,13 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6BF8D451C0DA21D007B2372 /* FindPath */,
+				F6BF8D3D1C0DA1DD007B2372 /* Game01.cpp */,
+				F6BF8D3E1C0DA1DD007B2372 /* Game01.hpp */,
+				F6BF8D3F1C0DA1DD007B2372 /* MapTest01.cpp */,
+				F6BF8D401C0DA1DD007B2372 /* MapTest01.hpp */,
+				F6BF8D201C0DA003007B2372 /* Map01.cpp */,
+				F6BF8D211C0DA003007B2372 /* Map01.hpp */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
@@ -313,6 +356,23 @@
 				532641FFA4E0DECB96783029 /* libcocos2d iOS.a */,
 			);
 			name = "ios-libs";
+			sourceTree = "<group>";
+		};
+		F6BF8D451C0DA21D007B2372 /* FindPath */ = {
+			isa = PBXGroup;
+			children = (
+				F6BF8D461C0DA21D007B2372 /* GameScene.cpp */,
+				F6BF8D471C0DA21D007B2372 /* GameScene.hpp */,
+				F6BF8D481C0DA21D007B2372 /* Grid.cpp */,
+				F6BF8D491C0DA21D007B2372 /* Grid.hpp */,
+				F6BF8D4A1C0DA21D007B2372 /* PathAritmeic.cpp */,
+				F6BF8D4B1C0DA21D007B2372 /* PathAritmeic.hpp */,
+				F6BF8D4C1C0DA21D007B2372 /* PointDelegate.cpp */,
+				F6BF8D4D1C0DA21D007B2372 /* PointDelegate.hpp */,
+				F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */,
+				F6BF8D4F1C0DA21D007B2372 /* SpriteBase.hpp */,
+			);
+			path = FindPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +454,7 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				F6BF8D3B1C0DA0E1007B2372 /* map in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -411,6 +472,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BF8D3C1C0DA0E1007B2372 /* map in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				65864E89AE5B86C9D1F66D1E /* res in Resources */,
 			);
@@ -423,11 +485,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BF8D411C0DA1DD007B2372 /* Game01.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				F6BF8D221C0DA003007B2372 /* Map01.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				F6BF8D431C0DA1DD007B2372 /* MapTest01.cpp in Sources */,
+				F6BF8D541C0DA21D007B2372 /* PathAritmeic.cpp in Sources */,
+				F6BF8D561C0DA21D007B2372 /* PointDelegate.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				F6BF8D501C0DA21D007B2372 /* GameScene.cpp in Sources */,
+				F6BF8D581C0DA21D007B2372 /* SpriteBase.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				F6BF8D521C0DA21D007B2372 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,8 +506,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				F6BF8D421C0DA1DD007B2372 /* Game01.cpp in Sources */,
+				F6BF8D231C0DA003007B2372 /* Map01.cpp in Sources */,
+				F6BF8D571C0DA21D007B2372 /* PointDelegate.cpp in Sources */,
+				F6BF8D441C0DA1DD007B2372 /* MapTest01.cpp in Sources */,
+				F6BF8D511C0DA21D007B2372 /* GameScene.cpp in Sources */,
+				F6BF8D551C0DA21D007B2372 /* PathAritmeic.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				F6BF8D591C0DA21D007B2372 /* SpriteBase.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				F6BF8D531C0DA21D007B2372 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,10 +546,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/ios",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -505,10 +580,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/ios",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -544,10 +616,7 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/mac",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/mac";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
@@ -578,10 +647,7 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/mac",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.8.1/prebuilt/mac";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",

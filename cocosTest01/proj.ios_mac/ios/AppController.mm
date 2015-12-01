@@ -57,9 +57,11 @@ static AppDelegate s_sharedApplication;
                                      numberOfSamples: 0 ];
     
     // Enable or disable multiple touches
-    [eaglView setMultipleTouchEnabled:NO];
+//    [eaglView setMultipleTouchEnabled:NO];
+    // yly 开启多点触控
+    [eaglView setMultipleTouchEnabled:YES];
 
-    // Use RootViewController manage CCEAGLView 
+    // Use RootViewController manage CCEAGLView
     _viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     _viewController.wantsFullScreenLayout = YES;
     _viewController.view = eaglView;
