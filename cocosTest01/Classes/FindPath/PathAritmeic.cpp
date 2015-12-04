@@ -16,7 +16,6 @@ bool PathArithmetic::isCheck(Vec2 point, std::vector<Vector<Grid*>> _gridVector)
         return false;
     }
     // _invalidPoints 中记录已经经过的点，如果该集合中包含这个点，返回false
-    PointDelegate* g = PointDelegate::create(point.x, point.y);
     for(int i = 0 ;i<_invalidPoints.size();i++){
         PointDelegate* pp = _invalidPoints.at(i);
         Vec2 t = Vec2(pp->getX(),pp->getY());
@@ -28,6 +27,8 @@ bool PathArithmetic::isCheck(Vec2 point, std::vector<Vector<Grid*>> _gridVector)
     if (point.x>=mapWidth||point.y>=mapHeight) {
         return false;
     }
+    
+    PointDelegate* g = PointDelegate::create(point.x, point.y);
     // 从二维数组中获取当前点所代表的地图网格，判断x,y代表的点是否可以通过（有障碍物则不能通过）
     Vector<Grid*> tempX = _gridVector.at((int)g->getX());
     Grid* grid = tempX.at((int)g->getY());
@@ -39,9 +40,10 @@ bool PathArithmetic::isCheck(Vec2 point, std::vector<Vector<Grid*>> _gridVector)
 
 
 // 查找有效路径函数（递归搜索）
-bool PathArithmetic::findValidGrid(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gridArray){
+bool PathArithmetic::findValidGrid(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gridArray
+                                   ,float f,float g,float h){
     // 因为Vector 不支持存储Point,所以使用一个代理类PointDelegate储存Point的x和y
-    PointDelegate* fromDelegate = PointDelegate::create(from.x, from.y);
+    PointDelegate* fromDelegate = PointDelegate::create(from.x, from.y,f,g,h);
     //（1） 记录走过的点，之后的点如果存在这个集合当中，则视为无效点，不再重复记录
     _invalidPoints.pushBack(fromDelegate);
     // (2) 判断当前点的上、右、左、下、左上、右上、右下8个点是否有效或者是目的点
@@ -74,17 +76,52 @@ bool PathArithmetic::findValidGrid(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gr
     std::sort(temp.begin(), temp.end(), [=](const Ref* obj1,const Ref* obj2){
         PointDelegate* p1 = (PointDelegate*)obj1;
         PointDelegate* p2 = (PointDelegate*)obj2;
-        double r1 = sqrt((p1->getX()-to.x)*(p1->getX()-to.x)+(p1->getY()-to.y)*(p1->getY()-to.y));
-        double r2 = sqrt((p2->getX()-to.x)*(p2->getX()-to.x)+(p2->getY()-to.y)*(p2->getY()-to.y));
-        return r1<r2?-1:0;
+//        double r1 = sqrt((p1->getX()-to.x)*(p1->getX()-to.x)+(p1->getY()-to.y)*(p1->getY()-to.y));
+//        double r2 = sqrt((p2->getX()-to.x)*(p2->getX()-to.x)+(p2->getY()-to.y)*(p2->getY()-to.y));
+//        return r1<r2?-1:0;
+        
+        //        如果是整形的，就是abs()
+        //        如果是浮点型的，是fabs()
+                double ylyH1 = (abs(to.x-p1->getX())+ abs(to.y-p1->getY()))*10;
+        log("%f*****%f******%f",to.x-p1->getX(),to.y-p1->getY(),(to.x-p1->getX())+ (to.y-p1->getY()));
+                double ylyH2 = (abs(to.x-p2->getX())+ abs(to.y-p2->getY()))*10;
+        
+//                 ylyH1 = sqrt((p1->getX()-to.x)*(p1->getX()-to.x)+(p1->getY()-to.y)*(p1->getY()-to.y));
+//                 ylyH2 = sqrt((p2->getX()-to.x)*(p2->getX()-to.x)+(p2->getY()-to.y)*(p2->getY()-to.y));
+//        
+        
+                double f1 = ylyH1 + g;
+        log("%f",g);
+                double f2 = ylyH2 + g;
+        
+        
+        p1->setF(f1);
+        p1->setG(g);
+        p1->setH(ylyH1);
+        p2->setF(f2);
+        p2->setG(g);
+        p2->setH(ylyH2);
+        
+                return f1<f2?-1:0;
     });
     
-    // （4）递归找出所以有效点直到搜索到终点。
+    // 自己编写寻路
+    //        如果是整形的，就是abs()
+    //        如果是浮点型的，是fabs()
+    //        int ylyH1 = abs(to.x-p1->getX() + to.y-p1->getY())*10;
+    //        int ylyH2 = abs(to.x-p2->getX() + to.y-p2->getY())*10;
+    //
+    //        int f1 = ylyH1 + g;
+    //        int f2 = ylyH2 + g;
+    //
+    //        return f1<f2?-1:0;
+    
+    // （4）递归找出所有有效点直到搜索到终点。
     for (int i=0; i<temp.size(); i++) {
         PointDelegate* pd = temp.at(i);
         Vec2 p = Vec2(pd->getX(),pd->getY());
         // 递归调用findValidGrid函数
-        bool flag = findValidGrid(p, to, _gridArray);
+        bool flag = findValidGrid(p, to, _gridArray,g+10+h,g+10,h);
         if (flag) {
             //(5)把距离最近的有效点存储到_pathPoints数组
             _pathPoints.pushBack(pd);
@@ -97,7 +134,7 @@ bool PathArithmetic::findValidGrid(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gr
 // 寻路函数
 Vector<PointDelegate*> PathArithmetic::getPath(Point from, Point to, vector<Vector<Grid*>> _gridArray){
     // 调用findValidGrid 函数递归完成路径查找
-    findValidGrid(from, to, _gridArray);
+    findValidGrid(from, to, _gridArray ,0.0,10.0,0.0);
     // 路径计算完成，_pathPoints 集合当中存储的是最佳路径的每一个Point点
     // 因为存储时是先加入第一步网格，再加入第二步网格，所以需要反转数组
     _pathPoints.reverse();

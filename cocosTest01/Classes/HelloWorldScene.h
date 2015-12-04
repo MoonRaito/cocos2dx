@@ -11,6 +11,7 @@ private:
     void onMenuItem(Ref *ref);
     void onMenuItemGameMap(Ref *ref);
     void onMenuItemMyGame(Ref *ref);
+    void onMenuItemTestMyGame(Ref *ref);
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();

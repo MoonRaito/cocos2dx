@@ -1,24 +1,24 @@
 //
-//  MyGame.hpp
+//  TestMyGameA*.hpp
 //  cocosTest01
 //
-//  Created by Moon on 15/12/1.
+//  Created by Moon on 15/12/2.
 //
 //
 
-#ifndef MyGame_hpp
-#define MyGame_hpp
+#ifndef TestMyGameA__hpp
+#define TestMyGameA__hpp
 
 #include <stdio.h>
 #include <vector>
 #include "cocos2d.h"
-#include "SpriteBase.hpp"
-#include "PathAritmeic.hpp"
+#include "../MyGame/SpriteBase.hpp"
+#include "../MyGame/PathAritmeic.hpp"
 // 使用命名空间
 using namespace std;
 USING_NS_CC;
 // 游戏主场景
-class MyGame : public cocos2d::Layer{
+class TestMyGame : public cocos2d::Layer{
 private:
     TMXTiledMap* _titleMap; // 地图
     Sprite* _player; // 玩家精灵
@@ -64,6 +64,7 @@ public:
     /**
      * 使用CREATE_FUNC宏创建当前类的对象，返回的对象将会由自动释放池管理内存的释放
      */
-    CREATE_FUNC(MyGame);
+    CREATE_FUNC(TestMyGame);
 };
-#endif /* MyGame_hpp */
+
+#endif /* TestMyGameA__hpp */

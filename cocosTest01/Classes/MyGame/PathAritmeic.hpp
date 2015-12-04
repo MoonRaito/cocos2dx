@@ -2,7 +2,7 @@
 //  PathAritmeic.hpp
 //  cocosTest01
 //
-//  Created by Moon on 15/12/1.
+//  Created by Moon on 15/12/2.
 //
 //
 
@@ -22,7 +22,7 @@ enum{
     mapWidth = 26,
     mapHeight = 20
 };
-
+// new
 class PathArithmetic:public cocos2d::Ref{
 private:
     // 记录已经经过的点
@@ -57,7 +57,7 @@ public:
      *  @param gridVector 网格二维数组
      *  @return true 有效路径 false 无效路径
      */
-    bool findValidGrid(Vec2 from,Vec2 to,std::vector<Vector<Grid*>> gridVector,float f,float g,float h);
+    bool findValidGrid(Vec2 from,Vec2 to,std::vector<Vector<Grid*>> gridVector);
     /**
      *  检查point点的有效性（是否可以通过）
      *  @parm point 点
@@ -68,31 +68,3 @@ public:
     
 };
 #endif /* PathAritmeic_hpp */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

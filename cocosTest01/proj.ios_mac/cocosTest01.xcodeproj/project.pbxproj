@@ -61,6 +61,8 @@
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 		F0F24BEB88841CFBFE570287 /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC84510B1413B3FCD7DE99B /* libcocos2d Mac.a */; };
+		F610EA2F1C0FE6FA009FE10E /* AStartTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F610EA2D1C0FE6FA009FE10E /* AStartTest.cpp */; settings = {ASSET_TAGS = (); }; };
+		F610EA301C0FE6FA009FE10E /* AStartTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F610EA2D1C0FE6FA009FE10E /* AStartTest.cpp */; settings = {ASSET_TAGS = (); }; };
 		F6BF8D221C0DA003007B2372 /* Map01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D201C0DA003007B2372 /* Map01.cpp */; settings = {ASSET_TAGS = (); }; };
 		F6BF8D231C0DA003007B2372 /* Map01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D201C0DA003007B2372 /* Map01.cpp */; settings = {ASSET_TAGS = (); }; };
 		F6BF8D3B1C0DA0E1007B2372 /* map in Resources */ = {isa = PBXBuildFile; fileRef = F6BF8D3A1C0DA0E1007B2372 /* map */; settings = {ASSET_TAGS = (); }; };
@@ -81,6 +83,16 @@
 		F6BF8D591C0DA21D007B2372 /* SpriteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D4E1C0DA21D007B2372 /* SpriteBase.cpp */; settings = {ASSET_TAGS = (); }; };
 		F6BF8D8A1C0DA67A007B2372 /* MyGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D881C0DA67A007B2372 /* MyGame.cpp */; settings = {ASSET_TAGS = (); }; };
 		F6BF8D8B1C0DA67A007B2372 /* MyGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BF8D881C0DA67A007B2372 /* MyGame.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E6D1C0ED21F009C8FF7 /* TestMyGameA*.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E6B1C0ED21F009C8FF7 /* TestMyGameA*.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E6E1C0ED21F009C8FF7 /* TestMyGameA*.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E6B1C0ED21F009C8FF7 /* TestMyGameA*.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E711C0ED25E009C8FF7 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E6F1C0ED25E009C8FF7 /* Grid.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E721C0ED25E009C8FF7 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E6F1C0ED25E009C8FF7 /* Grid.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E751C0ED27B009C8FF7 /* PathAritmeic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E731C0ED27B009C8FF7 /* PathAritmeic.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E761C0ED27B009C8FF7 /* PathAritmeic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E731C0ED27B009C8FF7 /* PathAritmeic.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E791C0ED28C009C8FF7 /* PointDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E771C0ED28C009C8FF7 /* PointDelegate.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E7A1C0ED28C009C8FF7 /* PointDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E771C0ED28C009C8FF7 /* PointDelegate.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E7D1C0ED2A2009C8FF7 /* SpriteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E7B1C0ED2A2009C8FF7 /* SpriteBase.cpp */; settings = {ASSET_TAGS = (); }; };
+		F6EE7E7E1C0ED2A2009C8FF7 /* SpriteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EE7E7B1C0ED2A2009C8FF7 /* SpriteBase.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +153,8 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F610EA2D1C0FE6FA009FE10E /* AStartTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AStartTest.cpp; sourceTree = "<group>"; };
+		F610EA2E1C0FE6FA009FE10E /* AStartTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AStartTest.hpp; sourceTree = "<group>"; };
 		F6BF8D201C0DA003007B2372 /* Map01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map01.cpp; sourceTree = "<group>"; };
 		F6BF8D211C0DA003007B2372 /* Map01.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map01.hpp; sourceTree = "<group>"; };
 		F6BF8D3A1C0DA0E1007B2372 /* map */ = {isa = PBXFileReference; lastKnownFileType = folder; path = map; sourceTree = "<group>"; };
@@ -160,6 +174,16 @@
 		F6BF8D4F1C0DA21D007B2372 /* SpriteBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteBase.hpp; sourceTree = "<group>"; };
 		F6BF8D881C0DA67A007B2372 /* MyGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGame.cpp; sourceTree = "<group>"; };
 		F6BF8D891C0DA67A007B2372 /* MyGame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyGame.hpp; sourceTree = "<group>"; };
+		F6EE7E6B1C0ED21F009C8FF7 /* TestMyGameA*.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "TestMyGameA*.cpp"; path = "MyGame/TestMyGameA*.cpp"; sourceTree = "<group>"; };
+		F6EE7E6C1C0ED21F009C8FF7 /* TestMyGameA*.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = "TestMyGameA*.hpp"; path = "MyGame/TestMyGameA*.hpp"; sourceTree = "<group>"; };
+		F6EE7E6F1C0ED25E009C8FF7 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Grid.cpp; path = MyGame/Grid.cpp; sourceTree = "<group>"; };
+		F6EE7E701C0ED25E009C8FF7 /* Grid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Grid.hpp; path = MyGame/Grid.hpp; sourceTree = "<group>"; };
+		F6EE7E731C0ED27B009C8FF7 /* PathAritmeic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathAritmeic.cpp; path = MyGame/PathAritmeic.cpp; sourceTree = "<group>"; };
+		F6EE7E741C0ED27B009C8FF7 /* PathAritmeic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PathAritmeic.hpp; path = MyGame/PathAritmeic.hpp; sourceTree = "<group>"; };
+		F6EE7E771C0ED28C009C8FF7 /* PointDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointDelegate.cpp; path = MyGame/PointDelegate.cpp; sourceTree = "<group>"; };
+		F6EE7E781C0ED28C009C8FF7 /* PointDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PointDelegate.hpp; path = MyGame/PointDelegate.hpp; sourceTree = "<group>"; };
+		F6EE7E7B1C0ED2A2009C8FF7 /* SpriteBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpriteBase.cpp; path = MyGame/SpriteBase.cpp; sourceTree = "<group>"; };
+		F6EE7E7C1C0ED2A2009C8FF7 /* SpriteBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SpriteBase.hpp; path = MyGame/SpriteBase.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +315,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6EE7E6A1C0ED1C8009C8FF7 /* MyGame */,
 				F6BF8D451C0DA21D007B2372 /* FindPath */,
 				F6BF8D3D1C0DA1DD007B2372 /* Game01.cpp */,
 				F6BF8D3E1C0DA1DD007B2372 /* Game01.hpp */,
@@ -302,6 +327,8 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				F610EA2D1C0FE6FA009FE10E /* AStartTest.cpp */,
+				F610EA2E1C0FE6FA009FE10E /* AStartTest.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -379,6 +406,23 @@
 				F6BF8D4F1C0DA21D007B2372 /* SpriteBase.hpp */,
 			);
 			path = FindPath;
+			sourceTree = "<group>";
+		};
+		F6EE7E6A1C0ED1C8009C8FF7 /* MyGame */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE7E6B1C0ED21F009C8FF7 /* TestMyGameA*.cpp */,
+				F6EE7E6C1C0ED21F009C8FF7 /* TestMyGameA*.hpp */,
+				F6EE7E6F1C0ED25E009C8FF7 /* Grid.cpp */,
+				F6EE7E701C0ED25E009C8FF7 /* Grid.hpp */,
+				F6EE7E731C0ED27B009C8FF7 /* PathAritmeic.cpp */,
+				F6EE7E741C0ED27B009C8FF7 /* PathAritmeic.hpp */,
+				F6EE7E771C0ED28C009C8FF7 /* PointDelegate.cpp */,
+				F6EE7E781C0ED28C009C8FF7 /* PointDelegate.hpp */,
+				F6EE7E7B1C0ED2A2009C8FF7 /* SpriteBase.cpp */,
+				F6EE7E7C1C0ED2A2009C8FF7 /* SpriteBase.hpp */,
+			);
+			name = MyGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,16 +539,22 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				F6BF8D221C0DA003007B2372 /* Map01.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				F6EE7E751C0ED27B009C8FF7 /* PathAritmeic.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				F6BF8D431C0DA1DD007B2372 /* MapTest01.cpp in Sources */,
+				F6EE7E791C0ED28C009C8FF7 /* PointDelegate.cpp in Sources */,
 				F6BF8D541C0DA21D007B2372 /* PathAritmeic.cpp in Sources */,
 				F6BF8D8A1C0DA67A007B2372 /* MyGame.cpp in Sources */,
 				F6BF8D561C0DA21D007B2372 /* PointDelegate.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				F6EE7E7D1C0ED2A2009C8FF7 /* SpriteBase.cpp in Sources */,
 				F6BF8D501C0DA21D007B2372 /* GameScene.cpp in Sources */,
 				F6BF8D581C0DA21D007B2372 /* SpriteBase.cpp in Sources */,
+				F6EE7E6D1C0ED21F009C8FF7 /* TestMyGameA*.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				F6BF8D521C0DA21D007B2372 /* Grid.cpp in Sources */,
+				F610EA2F1C0FE6FA009FE10E /* AStartTest.cpp in Sources */,
+				F6EE7E711C0ED25E009C8FF7 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,15 +565,21 @@
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				F6BF8D421C0DA1DD007B2372 /* Game01.cpp in Sources */,
 				F6BF8D231C0DA003007B2372 /* Map01.cpp in Sources */,
+				F6EE7E6E1C0ED21F009C8FF7 /* TestMyGameA*.cpp in Sources */,
+				F610EA301C0FE6FA009FE10E /* AStartTest.cpp in Sources */,
 				F6BF8D571C0DA21D007B2372 /* PointDelegate.cpp in Sources */,
+				F6EE7E721C0ED25E009C8FF7 /* Grid.cpp in Sources */,
 				F6BF8D441C0DA1DD007B2372 /* MapTest01.cpp in Sources */,
+				F6EE7E7A1C0ED28C009C8FF7 /* PointDelegate.cpp in Sources */,
 				F6BF8D511C0DA21D007B2372 /* GameScene.cpp in Sources */,
 				F6BF8D551C0DA21D007B2372 /* PathAritmeic.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				F6BF8D591C0DA21D007B2372 /* SpriteBase.cpp in Sources */,
+				F6EE7E7E1C0ED2A2009C8FF7 /* SpriteBase.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				F6BF8D531C0DA21D007B2372 /* Grid.cpp in Sources */,
 				F6BF8D8B1C0DA67A007B2372 /* MyGame.cpp in Sources */,
+				F6EE7E761C0ED27B009C8FF7 /* PathAritmeic.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 #include "MapTest01.hpp"
 #include "FindPath/GameScene.hpp"
 #include "FindPath/MyGame.hpp"
+#include "MyGame/TestMyGameA*.hpp"
 
 
 USING_NS_CC;
@@ -58,7 +59,7 @@ bool HelloWorld::init()
 //    Vec2 winSize = Director::getInstance()->getWinSize();
     
     // 可见视图大小
-    Size visiblesSize = Director::getInstance()->getVisibleSize();
+//    Size visiblesSize = Director::getInstance()->getVisibleSize();
     
     MenuItemFont *item = MenuItemFont::create("开始游戏",CC_CALLBACK_1(HelloWorld::onMenuItem,this));
     
@@ -75,9 +76,12 @@ bool HelloWorld::init()
     
     MenuItemFont *myGame = MenuItemFont::create("myGame",CC_CALLBACK_1(HelloWorld::onMenuItemMyGame,this));
     myGame->setPosition(Vec2(0.0, -100));
+    
+    MenuItemFont *testMyGameA = MenuItemFont::create("testMyGameA*",CC_CALLBACK_1(HelloWorld::onMenuItemTestMyGame,this));
+    testMyGameA->setPosition(Vec2(0.0, -150));
 
     
-    Menu *menu = Menu::create(item,gameMap,myGame,NULL);
+    Menu *menu = Menu::create(item,gameMap,myGame,testMyGameA,NULL);
     
     
     this->addChild(menu);
@@ -125,7 +129,21 @@ void HelloWorld::onMenuItemMyGame(Ref *ref)
     //    Scene *scene = Game01::createScene();
     //    Scene *scene = MapTest01::createScene();
     Scene *scene = MyGame::createScene();
-    TransitionFade *transitionFade = TransitionFade::create(2, scene);
+    TransitionFade *transitionFade = TransitionFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(transitionFade);
+    // replaceScene 每次销毁前一场景
+    // push 不销毁
+    //    Director::getInstance()->pushScene(scene);
+    
+    // pop
+    
+}
+
+void HelloWorld::onMenuItemTestMyGame(Ref *ref)
+{
+    //    CCLOG("OK...");
+    Scene *scene = TestMyGame::createScene();
+    TransitionFade *transitionFade = TransitionFade::create(0.5, scene);
     Director::getInstance()->replaceScene(transitionFade);
     // replaceScene 每次销毁前一场景
     // push 不销毁

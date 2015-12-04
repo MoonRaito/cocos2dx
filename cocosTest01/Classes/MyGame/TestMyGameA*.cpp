@@ -1,21 +1,21 @@
 //
-//  MyGame.cpp
+//  TestMyGameA*.cpp
 //  cocosTest01
 //
-//  Created by Moon on 15/12/1.
+//  Created by Moon on 15/12/2.
 //
 //
 
-#include "MyGame.hpp"
-Scene *MyGame::createScene()
+#include "TestMyGameA*.hpp"
+Scene *TestMyGame::createScene()
 {
     Scene *scene = Scene::create();
-    auto layer = MyGame::create();
+    auto layer = TestMyGame::create();
     scene->addChild(layer);
     return scene;
 }
 
-bool MyGame::init(){
+bool TestMyGame::init(){
     // 调用父类的init方法
     if (!Layer::init()) {
         return false;
@@ -153,13 +153,13 @@ bool MyGame::init(){
     };
     // 添加场景优先事件监听器
     // 单点触摸事件暂时去掉
-//    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(planeListener, this);
+    //    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(planeListener, this);
     
     
     auto listener = EventListenerTouchAllAtOnce::create();
-    listener->onTouchesBegan = CC_CALLBACK_2(MyGame::onTouchesBegan,this);
-    listener->onTouchesMoved = CC_CALLBACK_2(MyGame::onTouchesMoved,this);
-    listener->onTouchesEnded = CC_CALLBACK_2(MyGame::onTouchesEnded,this);
+    listener->onTouchesBegan = CC_CALLBACK_2(TestMyGame::onTouchesBegan,this);
+    listener->onTouchesMoved = CC_CALLBACK_2(TestMyGame::onTouchesMoved,this);
+    listener->onTouchesEnded = CC_CALLBACK_2(TestMyGame::onTouchesEnded,this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     // 游戏主循环，每帧都调用的函数
@@ -169,26 +169,26 @@ bool MyGame::init(){
 }
 
 // tmap 转换 坐标
-Vec2 MyGame::tileCoordForPosition(Vec2 position){
+Vec2 TestMyGame::tileCoordForPosition(Vec2 position){
     // CC_COUNTENT_SCALE_FACTOR Retina返回2，否则返回1
     // 玩家位置的x坐标除以地图的宽，得到的是地图横向的第几个格子（tile）
     // 地图宽计算：26【格子】*64【图块的宽】 = 1680【地图宽】
     // 假如精灵在的x坐标是640，则精灵所在地图的格子计算：640【精灵位置】/64【图块宽度】 = 10 【格子】
     int x = (int)(position.x/(_titleMap->getTileSize().width/CC_CONTENT_SCALE_FACTOR()));
-//    int x = (int)((position.x*_titleMap->getScale())/(_titleMap->getTileSize().width*_titleMap->getScale()/CC_CONTENT_SCALE_FACTOR()));
+    //    int x = (int)((position.x*_titleMap->getScale())/(_titleMap->getTileSize().width*_titleMap->getScale()/CC_CONTENT_SCALE_FACTOR()));
     
     // 玩家位置的y坐标除以地图的高，得到的是地图纵向第几个格子（tile），
     // 但是因为cocos2d-x 的y 轴（左下角）和TileMap的y轴（左上角）相反，所以使用地图的高度减去玩家位置的y坐标
     float pointHeight = _titleMap->getTileSize().height / CC_CONTENT_SCALE_FACTOR();
-        int y = (int)((_titleMap->getMapSize().height*pointHeight-position.y)/pointHeight);
-//    float pointHeight = _titleMap->getTileSize().height*_titleMap->getScale() / CC_CONTENT_SCALE_FACTOR();
-//    int y = (int)((_titleMap->getMapSize().height*_titleMap->getScale()*pointHeight-(position.y*_titleMap->getScale()))/pointHeight);
+    int y = (int)((_titleMap->getMapSize().height*pointHeight-position.y)/pointHeight);
+    //    float pointHeight = _titleMap->getTileSize().height*_titleMap->getScale() / CC_CONTENT_SCALE_FACTOR();
+    //    int y = (int)((_titleMap->getMapSize().height*_titleMap->getScale()*pointHeight-(position.y*_titleMap->getScale()))/pointHeight);
     return Vec2(x,y);
 }
 
 
 // 玩家根据最佳路径点移动函数
-void MyGame::playerMoveWithWayPoints(Vec2 position, Vector<PointDelegate *> path){
+void TestMyGame::playerMoveWithWayPoints(Vec2 position, Vector<PointDelegate *> path){
     // 调用 getAnimateByName函数获得玩家精灵移动动画
     //    auto animate = getAnimateByName("player_move_",0.4f,4);
     // 创建一个动作，重复执行Animate动画
@@ -223,7 +223,7 @@ void MyGame::playerMoveWithWayPoints(Vec2 position, Vector<PointDelegate *> path
         // 停止动画
         //        _player->stopAction(repeatanimate);
         //        _player->setTexture("HelloWorld.png");
-
+        
         // ylyAdd
         for (int i = 0; i<_vsPath.size(); i++) {
             _vsPath.at(i)->removeFromParent();
@@ -239,7 +239,7 @@ void MyGame::playerMoveWithWayPoints(Vec2 position, Vector<PointDelegate *> path
 }
 
 // 将TileMap 坐标转换为OpenGL坐标
-Vec2 MyGame::locationForTilePos(Vec2 pos){
+Vec2 TestMyGame::locationForTilePos(Vec2 pos){
     int x = (int)(pos.x*(_titleMap->getTileSize().width/CC_CONTENT_SCALE_FACTOR()));
     float pointHeight = _titleMap->getTileSize().height/CC_CONTENT_SCALE_FACTOR();
     int y = (int)((_titleMap->getMapSize().height*pointHeight)-(pos.y*pointHeight));
@@ -247,18 +247,18 @@ Vec2 MyGame::locationForTilePos(Vec2 pos){
 }
 
 
-void MyGame::update(float delta){
+void TestMyGame::update(float delta){
     
 }
 
 
 // 多点触摸开始
-void MyGame::onTouchesBegan(const std::vector<Touch*>& touches, Event *event){
+void TestMyGame::onTouchesBegan(const std::vector<Touch*>& touches, Event *event){
     _isTouchesMoved = false; // ylyAdd 2015年12月02日09:24:51 每次初始化是否是移动 默认为不移动 当在move方法中 修改为 移动
 }
 
 // 多点触摸移动
-void MyGame::onTouchesMoved(const std::vector<Touch*>& touches, Event *event)
+void TestMyGame::onTouchesMoved(const std::vector<Touch*>& touches, Event *event)
 {
     _isTouchesMoved = true; // ylyAdd 2015年12月02日09:24:51 如果进行了移动 则不在结束时移动精灵
     // 获取 大小
@@ -376,7 +376,7 @@ void MyGame::onTouchesMoved(const std::vector<Touch*>& touches, Event *event)
 
 
 // 多点触摸结束
-void MyGame::onTouchesEnded(const std::vector<cocos2d::Touch *> &touches, cocos2d::Event *event){
+void TestMyGame::onTouchesEnded(const std::vector<cocos2d::Touch *> &touches, cocos2d::Event *event){
     if(touches.size() == 1&&!_isTouchesMoved){ // ylyAdd 2015年12月02日09:24:51 如果进行了移动 则不在结束时移动精灵
         //OpenGL 坐标
         Vec2 touchLocation = touches[0]->getLocation();
