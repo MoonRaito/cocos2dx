@@ -66,6 +66,8 @@ public:
      */
     bool isCheck(Vec2 point,std::vector<Vector<Grid*>> gridVector);
     
+    bool findValidGrid_1_0_1(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gridArray);
+    
 };
 #endif /* PathAritmeic_hpp */
 

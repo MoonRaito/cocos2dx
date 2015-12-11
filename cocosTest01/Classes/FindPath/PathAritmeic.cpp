@@ -89,10 +89,13 @@ bool PathArithmetic::findValidGrid(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gr
 //                 ylyH1 = sqrt((p1->getX()-to.x)*(p1->getX()-to.x)+(p1->getY()-to.y)*(p1->getY()-to.y));
 //                 ylyH2 = sqrt((p2->getX()-to.x)*(p2->getX()-to.x)+(p2->getY()-to.y)*(p2->getY()-to.y));
 //        
+        double g1 = (abs(from.x-p1->getX())+ abs(from.y-p1->getY()))*10;
+        double g2 = (abs(from.x-p1->getX())+ abs(from.y-p1->getY()))*10;
         
-                double f1 = ylyH1 + g;
+        
+                double f1 = ylyH1 + g1;
         log("%f",g);
-                double f2 = ylyH2 + g;
+                double f2 = ylyH2 + g2;
         
         
         p1->setF(f1);
@@ -128,6 +131,60 @@ bool PathArithmetic::findValidGrid(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gr
             return true;
         }
     }
+    return false;
+}
+
+// 查找有效路径函数（递归搜索）
+bool PathArithmetic::findValidGrid_1_0_1(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gridArray){
+    
+    // 记录已经经过的点  open
+//    Vector<PointDelegate*> _invalidPoints;
+    // 记录有效路径的点 close
+//    Vector<PointDelegate*> _pathPoints;
+    
+    PointDelegate* fromDelegate = PointDelegate::create(from.x, from.y); // 起点
+    _invalidPoints.pushBack(fromDelegate); // 放入open
+    
+    for (int i = 0; i<_invalidPoints.size(); i++) {
+        _pathPoints.pushBack(fromDelegate);  // 起点放入 close
+        
+        _invalidPoints.erase(i);
+        
+        
+        _invalidPoints.front(); // 返回首个元素
+        
+    }
+    
+    
+    
+    // 因为Vector 不支持存储Point,所以使用一个代理类PointDelegate储存Point的x和y
+//    PointDelegate* fromDelegate = PointDelegate::create(from.x, from.y);
+    //（1） 记录走过的点，之后的点如果存在这个集合当中，则视为无效点，不再重复记录
+    _invalidPoints.pushBack(fromDelegate);
+    // (2) 判断当前点的上、右、左、下4个点是否有效或者是目的点
+    // 使用临时Vector集合存储需要检测的8个点
+    Vector<PointDelegate*> points;
+    points.pushBack(PointDelegate::create(from.x, from.y-1));
+    points.pushBack(PointDelegate::create(from.x, from.y+1));
+    points.pushBack(PointDelegate::create(from.x-1, from.y));
+    points.pushBack(PointDelegate::create(from.x+1, from.y));
+    // 使用临时Vector集合储存4个点中有效（是否可以通过）的点
+    Vector<PointDelegate*> temp;
+    for (int i= 0; i<points.size(); i++) {
+        PointDelegate* pd = points.at(i);
+        // 判断当前点是不是最终点的to，如果是，存储到_pathPoints集合当中，返回true；
+        Vec2 p = Vec2(pd->getX(), pd->getY());
+        if (p.equals(to)) {
+            _pathPoints.pushBack(pd);
+            return true;
+        }
+        // 检查当前点的有效性（前、后、左、右是否可以通过），如果可以通过，添加到临时集合temp中准备排序
+        if (isCheck(p, _gridArray)) {
+            temp.pushBack(pd);
+        }
+    }
+    
+
     return false;
 }
 
