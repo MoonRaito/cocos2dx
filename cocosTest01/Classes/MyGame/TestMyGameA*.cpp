@@ -410,7 +410,11 @@ void TestMyGame::onTouchesEnded(const std::vector<cocos2d::Touch *> &touches, co
         }
         // 调用PathArithmetic对象的getPath函数获得起点到终点的最佳路径点的集合
         PathArithmetic* pa = PathArithmetic::create();
-        Vector<PointDelegate*> pathVector = pa->getPath(from, to, _gridVector);
+        
+        // yly
+//        Vector<PointDelegate*> pathVector = pa->getPath(from, to, _gridVector);
+        Vector<PointDelegate*> pathVector = pa->getPath_1_0_1(from, to, _gridVector);
+        
         // 在玩家精灵移动过程中，如果用户在此触摸屏幕移动玩家，而精灵没有运行动作，则直接执行移动动作
         if (_player->getNumberOfRunningActions()==0&&this->getNumberOfRunningActions()==0) {
             // 玩家根据最佳路径移动

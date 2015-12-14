@@ -29,6 +29,8 @@ private:
     Vector<PointDelegate*> _invalidPoints;
     // 记录有效路径的点
     Vector<PointDelegate*> _pathPoints;
+    
+    bool isHavePath(Vector<PointDelegate*> allPath,Vec2 checkPath);
 public:
     // 静态的create函数
     static PathArithmetic* create(){
@@ -67,6 +69,15 @@ public:
     bool isCheck(Vec2 point,std::vector<Vector<Grid*>> gridVector);
     
     bool findValidGrid_1_0_1(Vec2 from, Vec2 to, vector<Vector<Grid*>> _gridArray);
+    // 判断 是否 检查过
+    // 检查Point点的有效性（是否可以通过）
+    bool isCheck_1_0_1(Vec2 point, std::vector<Vector<Grid*>> _gridVector);
+    
+    // 寻路函数
+    Vector<PointDelegate*> getPath_1_0_1(Point from, Point to, vector<Vector<Grid*>> _gridArray);
+    
+    // 寻找的过的节点
+    Vector<PointDelegate*> getPath_1_0_2(Point from, Point to, vector<Vector<Grid*>> _gridArray);
     
 };
 #endif /* PathAritmeic_hpp */
