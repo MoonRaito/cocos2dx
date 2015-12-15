@@ -413,52 +413,52 @@ void MyGame::onTouchesEnded(const std::vector<cocos2d::Touch *> &touches, cocos2
         
         // yly
         //        Vector<PointDelegate*> pathVector = pa->getPath(from, to, _gridVector);
-        Vector<PointDelegate*> pathVector = pa->getPath_1_0_2(from, to, _gridVector);
+        Vector<PointDelegate*> pathVector = pa->getPath_1_0_1(from, to, _gridVector);
         
 //        Vector<FiniteTimeAction*> actionVector;
         
 //        _sPath = Sprite::create("player01.png");
         
-        // 循环最佳路径点集合，创建多个MvoeTo动作，玩家将执行多个MoveTo动作完成移动
-        for (int i = 0; i<pathVector.size(); i++) {
-            // 获得要移动的每一点
-            PointDelegate* pd = pathVector.at(i);
-            Vec2 p = Vec2(pd->getX(),pd->getY());
-            // 将tileMap的 网格转成gl坐标，即玩家需要移动的位置
-            Point glPoint = locationForTilePos(p);
-            // 创建一个Moveto动作，让精灵对象移动到指定位置
-//            MoveTo* moveTo = MoveTo::create(0.4f, glPoint);
-//            // 将该动作添加到临时数组
-//            actionVector.pushBack(moveTo);
-            
-            Sprite *sPath = Sprite::create("y.png");
-            sPath->setAnchorPoint(Vec2(0, 1));
-            sPath->setPosition(glPoint);
-            _titleMap->addChild(sPath,33);  // ylyAdd 添加路径精灵
-            _vsPath.pushBack(sPath);// 添加精灵集合
-        }
-        
-        if(to.equals(Vec2(9, 11))){
-            // ylyAdd
-            for (int i = 0; i<_vsPath.size(); i++) {
-                _vsPath.at(i)->removeFromParent();
-            }
-        }
-        
-        
-//        // 在玩家精灵移动过程中，如果用户在此触摸屏幕移动玩家，而精灵没有运行动作，则直接执行移动动作
-//        if (_player->getNumberOfRunningActions()==0&&this->getNumberOfRunningActions()==0) {
-//            // 玩家根据最佳路径移动
-//            playerMoveWithWayPoints(nodeLocation,pathVector);
-//            // 地图随玩家一起移动
-//            //            setViewPointCenter(nodeLocation);
-//        }else{
-//            // 如果精灵正在运行动作，先停止精灵动作和层动作，再执行移动动作
-//            _player->stopAllActions();
-//            this->stopAllActions();
-//            playerMoveWithWayPoints(nodeLocation,pathVector);
-//            //            setViewPointCenter(nodeLocation);
+//        // 循环最佳路径点集合，创建多个MvoeTo动作，玩家将执行多个MoveTo动作完成移动
+//        for (int i = 0; i<pathVector.size(); i++) {
+//            // 获得要移动的每一点
+//            PointDelegate* pd = pathVector.at(i);
+//            Vec2 p = Vec2(pd->getX(),pd->getY());
+//            // 将tileMap的 网格转成gl坐标，即玩家需要移动的位置
+//            Point glPoint = locationForTilePos(p);
+//            // 创建一个Moveto动作，让精灵对象移动到指定位置
+////            MoveTo* moveTo = MoveTo::create(0.4f, glPoint);
+////            // 将该动作添加到临时数组
+////            actionVector.pushBack(moveTo);
+//            
+//            Sprite *sPath = Sprite::create("y.png");
+//            sPath->setAnchorPoint(Vec2(0, 1));
+//            sPath->setPosition(glPoint);
+//            _titleMap->addChild(sPath,33);  // ylyAdd 添加路径精灵
+//            _vsPath.pushBack(sPath);// 添加精灵集合
 //        }
+//        
+//        if(to.equals(Vec2(9, 11))){
+//            // ylyAdd
+//            for (int i = 0; i<_vsPath.size(); i++) {
+//                _vsPath.at(i)->removeFromParent();
+//            }
+//        }
+        _player->setAnchorPoint(Vec2(0, 1));
+        
+        // 在玩家精灵移动过程中，如果用户在此触摸屏幕移动玩家，而精灵没有运行动作，则直接执行移动动作
+        if (_player->getNumberOfRunningActions()==0&&this->getNumberOfRunningActions()==0) {
+            // 玩家根据最佳路径移动
+            playerMoveWithWayPoints(nodeLocation,pathVector);
+            // 地图随玩家一起移动
+            //            setViewPointCenter(nodeLocation);
+        }else{
+            // 如果精灵正在运行动作，先停止精灵动作和层动作，再执行移动动作
+            _player->stopAllActions();
+            this->stopAllActions();
+            playerMoveWithWayPoints(nodeLocation,pathVector);
+            //            setViewPointCenter(nodeLocation);
+        }
     }
 }
 

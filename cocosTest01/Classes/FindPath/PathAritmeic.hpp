@@ -19,7 +19,7 @@ USING_NS_CC;
 using namespace std;
 // 枚举，代表地图的宽和高
 enum{
-    mapWidth = 26,
+    mapWidth = 30,
     mapHeight = 20
 };
 

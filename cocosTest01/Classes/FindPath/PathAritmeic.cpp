@@ -161,6 +161,7 @@ bool PathArithmetic::findValidGrid_1_0_1(Vec2 from, Vec2 to, vector<Vector<Grid*
         // 判断当前点是不是最终点的to，如果是，存储到_pathPoints集合当中，返回true；
         Vec2 p = Vec2(top->getX(), top->getY());
         if (p.equals(to)) {
+            log("%zd",_invalidPoints.size());
             // 返回 路径函数 未编写
             _pathPoints.pushBack(top);
             return true;
@@ -268,6 +269,7 @@ Vector<PointDelegate*> PathArithmetic::getPath_1_0_2(Point from, Point to, vecto
 
     // 返回最佳路径Point点集合
     return _pathPoints;
+//    return _invalidPoints;
 }
 
 // 包含是true
@@ -303,6 +305,13 @@ bool PathArithmetic::isCheck_1_0_1(Vec2 point, std::vector<Vector<Grid*>> _gridV
     // _invalidPoints 中记录已经经过的点，如果该集合中包含这个点，返回false
     for(int i = 0 ;i<_pathPoints.size();i++){
         PointDelegate* pp = _pathPoints.at(i);
+        Vec2 t = Vec2(pp->getX(),pp->getY());
+        if (point.equals(t)) {  // 并且同时是关闭的
+            return false;
+        }
+    }
+    for(int i = 0 ;i<_invalidPoints.size();i++){
+        PointDelegate* pp = _invalidPoints.at(i);
         Vec2 t = Vec2(pp->getX(),pp->getY());
         if (point.equals(t)) {  // 并且同时是关闭的
             return false;
